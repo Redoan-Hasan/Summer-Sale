@@ -185,9 +185,21 @@
                                     <p class="text-2xl font-medium text-black py-2">Discount : <span id="discount-price" class="text-[#11111180]">0.00</span> <span class="text-[#11111180]">TK</span></p>
                                     <p class="pb-6 text-2xl font-medium text-black py-2">Total: <span id="grand-total" class="text-[#11111180]">0.00</span> <span class="text-[#11111180]">TK</span></p>
                                     <div class="border-b-2 border-b-black w-10/12 flex items-center"></div>
-                                    <div class="pt-6">
-                                        <button id="purchase-btn" disabled class="btn btn-secondary btn-wide bg-[#E527B2] text-white">Make Purchase</button>
+                                    <!-- Open the modal using ID.showModal() method -->
+                                    <button id="purchase-btn" disabled class=" mt-6 btn btn-secondary btn-wide bg-[#E527B2] text-white" onclick="my_modal_1.showModal()">Make Purchase</button>
+                                    <dialog id="my_modal_1" class="modal">
+                                    <div class="modal-box flex flex-col items-center bg-white w-[500px]">
+                                    <img src="./images/congo.png" alt="">
+                                    <h3 class="font-bold text-5xl text-black">Congratulations</h3>
+                                    <p class="py-4 text-xl font-normal text-[#11111180]">Your Purchase the product</p>
+                                    <div class="modal-action">
+                                        <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn btn-secondary bg-[#E527B2] text-white ">Go Home</button>
+                                        </form>
                                     </div>
+                                    </div>
+                                </dialog>
                                 </div>
                         </div>
                     </div>
@@ -199,3 +211,8 @@
     <script src="./scritps.js"></script>
 </body>
 </html>
+
+
+<!-- <div class="pt-6">
+    <button id="purchase-btn" disabled class="btn btn-secondary btn-wide bg-[#E527B2] text-white">Make Purchase</button>
+</div> -->
