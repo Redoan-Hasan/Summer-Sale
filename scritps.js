@@ -20,11 +20,17 @@ let total = 0;
 function setItemNameToList(titleTextIdName){
     document.getElementById('purchase-btn').removeAttribute('disabled');
     const itemContainer = document.getElementById('selected-items');
+    const liLength = itemContainer.getElementsByTagName('li');
+    if(liLength.length >= 10){
+        alert('Cant add more items. You have reached the limit of 10 items');
+        return;
+    }
     const titleText = document.getElementById(titleTextIdName).innerText;
     const li = document.createElement('li');
     li.innerText= titleText;
     itemContainer.appendChild(li);
 }
+
 
 
 
@@ -50,6 +56,11 @@ function totalDiscountAndGrandTotal(cardPriceId){
 document.getElementById('kitchen-card1').addEventListener('click', function(){
     document.getElementById('purchase-btn').removeAttribute('disabled');
     const itemContainer = document.getElementById('selected-items');
+    const liLength = itemContainer.getElementsByTagName('li');
+    if(liLength.length > 10){
+        alert('Cant add more items. You have reached the limit of 10 items');
+        return;
+    }
     const titleText = document.getElementById('kitchen-card1Text').innerText;
     const li = document.createElement('li');
     li.innerText= titleText;
